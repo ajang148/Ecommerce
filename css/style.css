@@ -143,7 +143,7 @@ h1 {
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 10px;
-    display: block; /* Ensures the image block is centered */
+    display: block; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -167,6 +167,7 @@ h1 {
     font-weight: bold;
     color: #1d72b8;
     font-size: 1.2em;
+    text-align: center; /* Centers the text */
 }
 
 /* Input and select fields */
@@ -174,9 +175,12 @@ h1 {
     margin: 8px 0;
     padding: 6px;
     font-size: 0.9em;
-    width: 100%;
+    width: 40%;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; 
+    display: block; 
+    margin: 0 auto; 
+    text-align: center;
 }
 
 /* Styling price and total */
@@ -184,6 +188,7 @@ h1 {
     font-size: 1.1em;
     font-weight: bold;
     color: #1d72b8;
+   text-align: center;
 }
 
 /* Enlarging the button and centering it */
@@ -195,10 +200,19 @@ h1 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    width: 100%; /* Make the button take full width */
+    margin: 10px auto; /* Centers the button horizontally */
+    width: 40%; /* Set a width for the button */
+    display: block;
 }
 
 .btn:hover {
     background-color: #155a8c;
+}
+
+/* align the lables */
+label {
+    display: block; /* Ensures the label is treated as a block element */
+    text-align: center; /* Centers the label text */
+    font-size: 1em; /* Adjust font size if needed */
+    margin-bottom: 5px; /* Optional: Space below the label */
 }
