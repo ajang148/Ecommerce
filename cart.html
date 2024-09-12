@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>cart</title>
+</head>
+<body>
+
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+    </ul>
+
+    <section id="iterm-details" class="cart-container">
+        <div class="product-details">
+            <img  id="itemImage" alt="selected shoe" class="product-image"> 
+            <h3 id="itermName"></h3>
+            <p id="itermPrice"></p>
+            <p id="itemCode"></p>
+        </div>
+    </section>
+    <label>Enter Quantity</label>
+    <input type="number" id="how many" class="quantity-input"><br><br>
+    <div id="display"></div><br>
+
+    <label>Select delivery location</label>
+    <select name="" id="location" class="location-select">
+        <option value="">choose location..</option>
+        <option value='Nairobi'>Nairobi</option>
+        <option value='Nakuru'>Nakuru</option>
+        <option value='Kisumu'>Kisumu</option>
+        <option value='Mombasa'>Mombasa</option>
+    </select><br>
+
+    <h4 id="price"></h4>
+    <h3 id="fee"></h3>
+    <h3 id="total"></h3><br>
+    <button style="color: rgb(22, 22, 21); background-color: aqua;">BUY NOW</button>
+   
+
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+   
+   
+    
+</body>
+</html>
