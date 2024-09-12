@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: wheat;
+    background-color: white;
 }
 
 h1.loper {
@@ -20,7 +20,7 @@ h1.loper {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    background-color: wheat;
+    background-color: white;
     color: black;
 }
 
@@ -86,7 +86,7 @@ h1.loper {
 
 .section1 {
     padding: 2em;
-    background-color:wheat;
+    background-color:white;
     margin: 0 auto;
     max-width: 1200px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
