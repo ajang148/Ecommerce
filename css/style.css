@@ -48,26 +48,40 @@ h1.loper {
     color: #f5f5f5;
 }
 
+/* SECTION STYLINGS */
 
-.parent-container {
+.search-container {
     display: flex;
-    justify-content: center;
-    align-items: center; 
+    justify-content: center; /* Centers both the input and button */
+    align-items: center; /* Aligns them vertically */
+    margin: 20px auto; /* Adds some space and centers the container */
+    width: fit-content; /* Ensures the container only takes up the necessary width */
 }
 
 
 #search-input {
-    width: 50%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ccc;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px; /* Rounded corners on the left */
     outline: none;
-    transition: border-color 0.3s ease;
+    width: 90%; /* Set width for the input */
 }
 
-#search-input:focus {
-    border-color: purple;
+
+#search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-left: none; 
+    border-radius: 0 25px 25px 0; 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #155a8c; 
 }
 
 .section1 {
@@ -79,7 +93,7 @@ h1.loper {
     border-radius: 10px;
 }
 
-/* Product Grid Styles */
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -101,16 +115,14 @@ h1.loper {
 }
 
 .product-item button {
-    font-size: 1em;
-    font-weight: 600;
-    border-radius: 30px;
-    background-color:black;
-    padding: 10px;
-    color: wheat;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+   padding: 10px;
+   margin: 10px;
+   color: white;
+   background-color: #333;
+   border: none;
+   border-radius: 5px;
+   width: 30%;
+   text-align: center;
 
 }
 
@@ -125,10 +137,10 @@ h1.loper {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 350px;
     width: 100%;
-    margin: 0 auto; /* Centers the cart container horizontally */
+    margin: 0 auto; 
 }
 
-/* Centering the heading */
+
 h1 {
     text-align: center;
     margin-bottom: 15px;
@@ -136,7 +148,7 @@ h1 {
     color: #333;
 }
 
-/* Adjusting product image */
+
 .product-image {
     width: 80%;
     max-height: 200px;
@@ -148,7 +160,7 @@ h1 {
     margin-right: auto;
 }
 
-/* Centering product details */
+
 .product-details {
     display: flex;
     flex-direction: column;
@@ -162,15 +174,15 @@ h1 {
     color: #555;
 }
 
-/* Styling price */
+
 .price {
     font-weight: bold;
     color: #1d72b8;
     font-size: 1.2em;
-    text-align: center; /* Centers the text */
+    text-align: center; 
 }
 
-/* Input and select fields */
+
 .quantity-input, .location-select {
     margin: 8px 0;
     padding: 6px;
@@ -183,7 +195,7 @@ h1 {
     text-align: center;
 }
 
-/* Styling price and total */
+
 #price, #total {
     font-size: 1.1em;
     font-weight: bold;
@@ -191,17 +203,17 @@ h1 {
    text-align: center;
 }
 
-/* Enlarging the button and centering it */
+
 .btn {
     background-color: black;
     color: white;
-    padding: 15px 20px; /* Enlarged button padding */
-    font-size: 1.2em; /* Larger font size */
+    padding: 15px 20px; 
+    font-size: 1.2em; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 10px auto; /* Centers the button horizontally */
-    width: 40%; /* Set a width for the button */
+    margin: 10px auto; 
+    width: 40%; 
     display: block;
 }
 
@@ -209,10 +221,10 @@ h1 {
     background-color: #155a8c;
 }
 
-/* align the lables */
+
 label {
-    display: block; /* Ensures the label is treated as a block element */
-    text-align: center; /* Centers the label text */
-    font-size: 1em; /* Adjust font size if needed */
-    margin-bottom: 5px; /* Optional: Space below the label */
+    display: block; 
+    text-align: center; 
+    font-size: 1em; 
+    margin-bottom: 5px; 
 }
