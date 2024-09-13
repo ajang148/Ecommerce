@@ -1,9 +1,5 @@
-
-// let searchInput = document.getElementById('search-input')
-// let searchButton = document.getElementById('search-button')
-// let productContainer = document.getElementById('product')
-
-
+let searchInput = document.getElementById('search-input')
+let searchButton = document.getElementById('search-button')
 
 let products = [
     {Image: "image/clacks.jpg", Name: "Clacks", Price: 2000,CODE: "C200"},
@@ -27,23 +23,59 @@ let products = [
     {Image: "image/white.jpg",Name: "Nike",Price:8000 ,CODE: "F894"},
     {Image: "image/white.jpg",Name: "Nike",Price:9000 ,CODE: "G973"}
 ]
-
-let productContainer = document.getElementById('product')
-
-productContainer.innerHTML = products.map(product => `
-  <div class="product-item">
-    <img src="${product.Image}" alt="${product.Name}">
-    <p>${product.Name}</p>
-    <p>Price: ${product.Price}</p>
-    <button onclick='view("${product.CODE}")'>View</button>
-  </div>
-`).join('')
-
- 
+searchButton.addEventListener('click', () => {
+    // Get the search query from the input field
+    let searchQuery = searchInput.value
+    // Filter the products based on the search query
+    let filteredProducts = products.filter((product) => 
+      product.Name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      product.CODE.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  
+    // Update the product list with the filtered products
+    productContainer.innerHTML = filteredProducts.map((product, index) =>`
+      <div class ="product-item">
+        <img src="${product.Image}" alt="${product.Name}">
+        <p>${product.Name}</p>
+        <p>Price: ${product.Price}</p>
+        <p>Code: ${product.CODE}</p>
+        <button onclick="view('${product.CODE}')">View</button>
+      </div>
+       `
+  ).join('')
+})
+  
 function view(code){
-    window.open(`cart.html?${code}`, '_blank')
+      window.open(`cart.html?${code}`, '_blank')
 }
 
+let productContainer = document.getElementById('product')
+  // Initialize the product list
+  productContainer.innerHTML = products.map((product, index) => `
+    <div class ="product-item">
+      <img src="${product.Image}" alt="${product.Name}">
+      <p>${product.Name}</p>
+      <p>Price: ${product.Price}</p>
+      <p>Code: ${product.CODE}</p>
+      <button onclick="view('${product.CODE}')">View</button>
+    </div>`
+).join('')
+
+// let productContainer = document.getElementById('product')
+
+// productContainer.innerHTML = products.map(product => `
+//   <div class="product-item">
+//     <img src="${product.Image}" alt="${product.Name}">
+//     <p>${product.Name}</p>
+//     <p>Price: ${product.Price}</p>
+//     <button onclick='view("${product.CODE}")'>View</button>
+//   </div>
+// `).join('')
+
+ 
+// function view(code){
+//     window.open(`cart.html?${code}`, '_blank')
+// }
 
 
 
@@ -53,44 +85,3 @@ function view(code){
 
 
 
-// searchButton.addEventListener('click', () => {
-//     // Get the search query from the input field
-//     const searchQuery = searchInput.value
-  
-//     // Filter the products based on the search query
-//     const filteredProducts = products.filter((product) => {
-//       return product.Name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-//              product.CODE.toLowerCase().includes(searchQuery.toLowerCase());
-//     });
-  
-//     // Update the product list with the filtered products
-//     productContainer.innerHTML = filteredProducts.map((product, index) =>{
-//        return `
-//            <div class ="product-item">
-//                <img src="${product.Image}" alt="${product.Name}">
-//                <p>${product.Name}</p>
-//                <p>Price: ${product.Price}</p>
-//                <p>Code: ${product.CODE}</p>
-//                <button onclick="view('${product.CODE}')">View</button>
-//            </div>
-//        `
-//     }).join('');
-//   });
-  
-//   // Define the view function
-//   function view(code){
-//       window.open(`cart.html?CODE=${code}`, '_blank')
-//   }
-  
-//   // Initialize the product list
-//   productContainer.innerHTML = products.map((product, index) =>{
-//        return `
-//            <div class ="product-item">
-//                <img src="${product.Image}" alt="${product.Name}">
-//                <p>${product.Name}</p>
-//                <p>Price: ${product.Price}</p>
-//                <p>Code: ${product.CODE}</p>
-//                <button onclick="view('${product.CODE}')">View</button>
-//            </div>
-//        `
-//   }).join('');
