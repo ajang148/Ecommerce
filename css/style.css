@@ -199,7 +199,7 @@ h1 {
 #price, #total {
     font-size: 1.1em;
     font-weight: bold;
-    color: #1d72b8;
+    color: black;
    text-align: center;
 }
 
@@ -218,7 +218,7 @@ h1 {
 }
 
 .btn:hover {
-    background-color: #155a8c;
+    background-color: #29363f;
 }
 
 
