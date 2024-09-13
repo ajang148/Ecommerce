@@ -14,7 +14,7 @@ let product = products.find(p => p.CODE === selectedItemCode)
 if (product) {
     document.getElementById("itemImage").src = product.Image;
     document.getElementById("itermName").innerHTML = product.Name;
-    document.getElementById("itermPrice").innerHTML = `Kes ${product.Price}`;
+    document.getElementById("itermPrice").innerHTML = `price: ${product.Price}`;
     document.getElementById("itemCode").innerHTML = product.CODE;
 
     let cost = product.Price
@@ -26,13 +26,14 @@ function calCulate(cost){
     input.value = 1
     let quantity = parseInt(input.value)
     let total = quantity * cost
-    document.getElementById("price").innerHTML = `Kes: ${total}` 
-
+    document.getElementById("price").innerHTML = `price: ${total}` 
+    deliveryTotal(total)
+    
     input.addEventListener("keyup", () =>{
         let quantity = input.value
         if(quantity > 0 ){ 
             let total = quantity * cost
-             document.getElementById("price").innerHTML = `Kes: ${total}`
+            document.getElementById("price").innerHTML = `price: ${total}`
 
             console.log(total)
             deliveryTotal(total)
@@ -57,7 +58,7 @@ function deliveryTotal(total){
     }
 
     let finalCost = total + deliveryCost
-    document.getElementById("total").innerHTML = `Kes: ${finalCost}`
+    document.getElementById("total").innerHTML = `total price: ${finalCost}`
     
     console.log(finalCost)
 })

@@ -52,10 +52,10 @@ h1.loper {
 
 .search-container {
     display: flex;
-    justify-content: center; /* Centers both the input and button */
-    align-items: center; /* Aligns them vertically */
-    margin: 20px auto; /* Adds some space and centers the container */
-    width: fit-content; /* Ensures the container only takes up the necessary width */
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px auto; 
+    width: fit-content; 
 }
 
 
@@ -63,9 +63,9 @@ h1.loper {
     padding: 10px;
     font-size: 16px;
     border: 2px solid #ccc;
-    border-radius: 25px 0 0 25px; /* Rounded corners on the left */
+    border-radius: 25px 0 0 25px; 
     outline: none;
-    width: 90%; /* Set width for the input */
+    width: 90%; 
 }
 
 
@@ -147,11 +147,11 @@ h1.loper {
 }
 
 
-h1 {
+h3 {
     text-align: center;
     margin-bottom: 15px;
     font-size: 1.5em;
-    color: #333;
+    color: black;
 }
 
 
@@ -176,14 +176,14 @@ h1 {
 
 .product-details p {
     margin: 8px 0;
-    font-size: 1em;
-    color: #555;
+    font-size: 1.1em;
+    color: black;
+    font-weight: 500;
 }
 
 
 .price {
     font-weight: bold;
-    color: #1d72b8;
     font-size: 1.2em;
     text-align: center; 
 }
@@ -192,7 +192,7 @@ h1 {
 .quantity-input, .location-select {
     margin: 8px 0;
     padding: 6px;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 40%;
     border-radius: 5px;
     border: 1px solid #ccc; 
