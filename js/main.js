@@ -7,10 +7,10 @@
 
 let products = [
     {Image: "image/clacks.jpg", Name: "Clacks", Price: 2000,CODE: "C200"},
-    {Image: "image/low.jpg",Name: "Puma",Price: 1200,CODE: "M400"},
+    {Image: "image/part1.jpg",Name: "Puma",Price: 1200,CODE: "M400"},
     {Image: "image/part1.jpg",Name: "Puma",Price: 2000,CODE: "F101"},
     {Image: "image/hikaique.jpg", Name: "Puma",Price: 5000,CODE: "D201"},
-    {Image: "image/mnzoutfits.jpg",Name: "Puma",Price: 5000,CODE: "B202"},
+    {Image: "image/black.jpg",Name: "Puma",Price: 5000,CODE: "B202"},
     {Image: "image/black.jpg",Name: "addidas",Price:3000,CODE: "P505"},
     {Image: "image/black.jpg",Name: "addidas",Price:4200,CODE: "S606"},
     {Image: "image/black.jpg",Name: "addidas",Price: 100,CODE: "O303"},
@@ -21,7 +21,7 @@ let products = [
     {Image: "image/black.jpg",Name: "addidas",Price: 5000,CODE: "M1010"},
     {Image: "image/black.jpg",Name: "addidas",Price: 5000,CODE: "B1111"},
     {Image: "image/black.jpg",Name: "addidas",Price:4000 ,CODE: "A290"},
-    {Image: "image/white.jpg",Name: "Nike",Price:5000 ,CODE: "S345"},
+    {Image: "image/black.jpg",Name: "Nike",Price:5000 ,CODE: "S345"},
     {Image: "image/white.jpg",Name: "Nike",Price:6000 ,CODE: "D237"},
     {Image: "image/white.jpg",Name: "Nike",Price:7000 ,CODE: "S234"},
     {Image: "image/white.jpg",Name: "Nike",Price:8000 ,CODE: "F894"},
@@ -35,7 +35,6 @@ productContainer.innerHTML = products.map(product => `
     <img src="${product.Image}" alt="${product.Name}">
     <p>${product.Name}</p>
     <p>Price: ${product.Price}</p>
-    <p>Code: ${product.CODE}</p>
     <button onclick='view("${product.CODE}")'>View</button>
   </div>
 `).join('')

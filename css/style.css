@@ -113,6 +113,12 @@ h1.loper {
     height: auto;
     border-radius: 10px;
 }
+.product-item p{
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+}
 
 .product-item button {
    padding: 10px;
@@ -123,11 +129,11 @@ h1.loper {
    border-radius: 5px;
    width: 30%;
    text-align: center;
-
+   cursor: pointer;
 }
 
 .product-item button:hover {
-    background-color: darkpurple;
+    background-color: darkcyan;
 }
 
 .cart-container {
